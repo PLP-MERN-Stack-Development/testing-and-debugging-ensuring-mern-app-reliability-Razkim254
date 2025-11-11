@@ -6,16 +6,20 @@ require('dotenv').config({ path: envPath });
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const bugRoutes = require('./routes/bugRoutes');
-const { errorHandler } = require('./middleware/errorHandler');
 
-// Initialize app
+// ✅ Initialize app FIRST
 const app = express();
 app.use(cors());
 app.use(express.json());
 
 // Routes
+const bugRoutes = require('./routes/bugRoutes');
+const postRoutes = require('./routes/posts');
 app.use('/api/bugs', bugRoutes);
+app.use('/api/posts', postRoutes);
+
+// Error handler
+const { errorHandler } = require('./middleware/errorHandler');
 app.use(errorHandler);
 
 // Connect to MongoDB and start server (only if not in test mode)

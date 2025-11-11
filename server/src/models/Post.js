@@ -1,11 +1,11 @@
 const mongoose = require('mongoose');
 
 const postSchema = new mongoose.Schema({
-  title: String,
-  content: String,
-  author: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
-  category: mongoose.Schema.Types.ObjectId,
-  slug: String,
-});
+  title:    { type: String, required: true },
+  content:  { type: String, required: true },
+  slug:     { type: String, required: true, unique: true },
+  author:   { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
+  category: { type: mongoose.Schema.Types.ObjectId, required: true },
+}, { timestamps: true });
 
 module.exports = mongoose.model('Post', postSchema);
