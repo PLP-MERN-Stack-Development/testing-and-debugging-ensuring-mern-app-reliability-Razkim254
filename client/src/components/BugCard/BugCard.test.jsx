@@ -1,6 +1,6 @@
 import React from 'react';
+import BugCard from './BugCard';
 import { render, screen } from '@testing-library/react';
-import BugCard from '../components/BugCard/BugCard';
 
 test('renders bug title', () => {
   render(<BugCard bug={{ title: 'Crash on login' }} />);

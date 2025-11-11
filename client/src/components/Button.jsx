@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 
 export default function Button({ children, onClick, disabled, variant = 'primary', size = 'md', className = '', ...props }) {
   const classes = `btn-${variant} btn-${size} ${disabled ? 'btn-disabled' : ''} ${className}`.trim();
