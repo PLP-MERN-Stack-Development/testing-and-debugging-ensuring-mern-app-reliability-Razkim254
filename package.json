@@ -1,0 +1,20 @@
+{
+  "name": "testing-and-debugging-ensuring-mern-app-reliability-razkim254",
+  "version": "1.0.0",
+  "description": "This assignment focuses on implementing comprehensive testing strategies for a MERN stack application, including unit testing, integration testing, and end-to-end testing, along with debugging techniques.",
+  "main": "jest.config.js",
+  "scripts": {
+    "test:all": "npm run test --prefix server && npm run test --prefix client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PLP-MERN-Stack-Development/testing-and-debugging-ensuring-mern-app-reliability-Razkim254.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PLP-MERN-Stack-Development/testing-and-debugging-ensuring-mern-app-reliability-Razkim254/issues"
+  },
+  "homepage": "https://github.com/PLP-MERN-Stack-Development/testing-and-debugging-ensuring-mern-app-reliability-Razkim254#readme"
+}
