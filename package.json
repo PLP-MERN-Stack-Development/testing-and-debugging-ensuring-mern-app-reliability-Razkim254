@@ -1,10 +1,14 @@
 {
   "name": "testing-and-debugging-ensuring-mern-app-reliability-razkim254",
   "version": "1.0.0",
-  "description": "This assignment focuses on implementing comprehensive testing strategies for a MERN stack application, including unit testing, integration testing, and end-to-end testing, along with debugging techniques.",
+  "description": "Comprehensive testing strategies for a MERN stack application: unit, integration, and end-to-end testing.",
   "main": "jest.config.js",
   "scripts": {
-    "test:all": "npm run test --prefix server && npm run test --prefix client"
+    "dev": "vite",                                
+    "test": "cross-env NODE_ENV=test jest",       
+    "test:all": "npm run test --prefix server && npm run test --prefix client", 
+    "test:e2e": "cypress run",                    
+    "test:e2e:percy": "percy exec -- cypress run" 
   },
   "repository": {
     "type": "git",
@@ -16,5 +20,11 @@
   "bugs": {
     "url": "https://github.com/PLP-MERN-Stack-Development/testing-and-debugging-ensuring-mern-app-reliability-Razkim254/issues"
   },
-  "homepage": "https://github.com/PLP-MERN-Stack-Development/testing-and-debugging-ensuring-mern-app-reliability-Razkim254#readme"
+  "homepage": "https://github.com/PLP-MERN-Stack-Development/testing-and-debugging-ensuring-mern-app-reliability-Razkim254#readme",
+  "devDependencies": {
+    "@percy/cli": "^1.31.4",
+    "@percy/cypress": "^3.1.0",
+    "cypress": "^15.6.0",
+    "cross-env": "^7.0.3"
+  }
 }
